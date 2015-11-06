@@ -1,0 +1,24 @@
+
+You can control your new XRF Reflector in an easy way by 
+sending some command via network 
+
+
+> nc -u localhost 30002 
+> lrf BXRF262C => ??
+ OK
+
+
+Dieser Befehl bedeutet, dass Du mit lrf = link reflector ausführst und
+der Synthax ist
+
+EigenesModulEntfernterReflectorEntferntesModul
+
+
+
+> pu => ??
+> R2AJV   ,192.168.25.204,REPEATER,102715,10:55:31,notMuted => ??
+> XRF400  ,5.196.8.77,REPEATER,102715,10:54:18,notMuted => ??
+> OK
+
+"PrintUser" die eingeloggt sind.
+
