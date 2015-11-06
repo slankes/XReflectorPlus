@@ -1,7 +1,7 @@
 <?php 
-include_once('/var/www/www.hacktic.de/data/configuration.php'); 
+include_once('/opt/dxrfd/public_html/configuration.php'); 
 
-$datafile = '/var/www/www.hacktic.de/data/xrf423.json';
+$datafile = '/opt/dxrfd/public_html/data.json';
 
 if (file_exists($datafile) && is_readable($datafile)) {
         fopen($datafile, r);
