@@ -1,0 +1,36 @@
+
+  DXRFD is a free Software for provide an D-Star Reflector 
+
+	for further informations please visit one of 
+	the following websites:
+	
+	- http://www.dstar.at
+	- http://www.xrfel.net 
+	- 
+
+INSTALL
+=======
+	Use one of the Install-Script in this directory for your OS
+
+
+CHANGELOG
+=========
+
+	Let's have a look at the CHANGELOG File in the same directory
+
+BUGS
+====
+	You can find a bug-reporting Tool at github.com
+
+
+COPYING/LICENSE
+===============
+	GNU GPL v3 License
+
+
+THANKS TO
+=========
+
+
+
+EOF;

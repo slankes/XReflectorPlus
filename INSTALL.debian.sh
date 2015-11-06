@@ -7,7 +7,7 @@
 #         USAGE:  ./INSTALL.Debian.sh
 #
 #   DESCRIPTION: Use this script to install the XRF Reflector
-#		 on an easy way.
+#		 on an debian like OS.
 #
 #       OPTIONS:  no
 #  REQUIREMENTS:  no
@@ -17,7 +17,7 @@
 #       COMPANY:
 #       VERSION:  0.1
 #       CREATED:  10/10/2015 15:42:08 UTC
-#      REVISION:  0.1
+#      REVISION:  1
 #============================================================
 
 #
@@ -134,12 +134,12 @@ eval "sed -i 's/^OWNER=.*/OWNER=$xrfname/' dxrfd.cfg"
 eval "sed -i 's/^ADMIN=.*/ADMIN=$callsign/' dxrfd.cfg"
 
 # Congrats
-echo '======================================================='
+echo '========================================================='
 echo
 echo
 echo 'Congratulations,'
-echo 'you have successfully installed DXRFD Refector Software.'
+echo 'you have successfully installed DXRFD Reflector Software.'
 echo
 echo
-echo '======================================================='
+echo '========================================================='
 exit 0;
