@@ -1,59 +1,8 @@
 <?php 
-
-/*
-*
-* A simple Dashboard based on Twitter Boostrap for D-Start XRF Reflector Deamon
-* Version 0.4 by DL5RFK 
-* CC-Licence 
-*/
-
-
-session_start();
-header('Cache-control: private'); // IE 6 FIX
-
-
 include_once('/opt/dxrfd/public_html/configuration.php'); 
+
 $datafile = '/opt/dxrfd/public_html/data.json';
 
-
-//http://www.bitrepository.com/php-how-to-add-multi-language-support-to-a-website.html
-if(isset($_GET['lang'])) {
-		$lang = $_GET['lang'];
- 
-		// register the session and set the cookie
-		$_SESSION['lang'] = $lang;
- 
-		setcookie('lang', $lang, time() + (3600 * 24 * 30));
-	} else if(isSet($_SESSION['lang'])) {
-		$lang = $_SESSION['lang'];
-		} else if(isset($_COOKIE['lang'])) {
-			$lang = $_COOKIE['lang'];
-			} else {
-				$lang = 'en'; }
-
-switch ($lang) {
-  case 'en':
-  $lang_file = 'lang.en.php';
-  break;
- 
-  case 'de':
-  $lang_file = 'lang.de.php';
-  break;
- 
-  case 'es':
-  $lang_file = 'lang.es.php';
-  break;
- 
-  default:
-  $lang_file = 'lang.en.php';
- 
-}
- 
-include_once 'languages/'.$lang_file;
-
-
-
-//
 if (file_exists($datafile) && is_readable($datafile)) {
         fopen($datafile, r);
         $values = file_get_contents($datafile, r);
@@ -104,23 +53,23 @@ if (file_exists($datafile) && is_readable($datafile)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="author" content="Klaus DL5RFK">
+    <meta name="author" content="Jean Gervers DO4IX">
     <meta name="content-language" content="en">
-    <meta name="publisher" content="">
-    <meta name="copyright" content="">
-    <meta name="description" content="XRF850 Dashboard">
-    <meta name="keywords" content="XRF850, Dashboard, D-Star, Reflector">
-    <meta name="page-topic" content="XRF850, Dashboard, D-Star">
-    <meta name="page-type" content="XRF850, Dashboard, D-Star">
+    <meta name="publisher" content="Jean Gervers">
+    <meta name="copyright" content="Jean Gervers">
+    <meta name="description" content="XRF423 Dashboard">
+    <meta name="keywords" content="XRF423, Dashboard, D-Star, DO4IX, Reflector">
+    <meta name="page-topic" content="XRF423, Dashboard, D-Star">
+    <meta name="page-type" content="XRF423, Dashboard, D-Star">
     <meta name="audience" content="all">
     <meta name="robots" content="index,follow">
     <meta name="classification" content="private">
     <meta name="allow-search" content="yes">
-    <meta name="searchtitle" content="XRF850 Dashboard">
-    <meta name="revisit-after" content="5 days">
-    <meta name="abstract" content="XRF850 Dashboard">
+    <meta name="searchtitle" content="XRF423 Dashboard">
+    <meta name="revisit-after" content="3 days">
+    <meta name="abstract" content="XRF423 Dashboard">
     <meta http-equiv="cache-control" content="no-cache">
-    <meta name="date" content="2015-11-07">
+    <meta name="date" content="2015-10-27">
 
 
 	<meta http-equiv="refresh" content="59"/>
@@ -130,21 +79,11 @@ if (file_exists($datafile) && is_readable($datafile)) {
     <title><?php echo PAGETITLE; ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo CSS_BOOTSTRAP_URL; ?>" rel="stylesheet">
-
-    <!-- Fork me on GitHub -->
-    <link rel="stylesheet" href="css/gh-fork-ribbon.css" />
-    <!--[if lt IE 9]>
-     <link rel="stylesheet" href="css/gh-fork-ribbon.ie.css" />
-    <![endif]-->
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -191,7 +130,7 @@ if (file_exists($datafile) && is_readable($datafile)) {
       <div class="container">
         <h1>INFO</h1>
         <?php echo INFOTEXT; ?>
-	<?php if(defined('HEADER_PIC_URL')){ echo '<img src="'.HEADER_PIC_URL.'" class="img-responsive" alt="Responsive image">';} ?>
+        <p><a class="btn btn-primary btn-lg" href="D-Star_Praesentation.pdf" role="button">DO6FC D-Star Pr&auml;sentation &raquo;</a></p>
       </div>
     </div>
 
@@ -200,47 +139,26 @@ if (file_exists($datafile) && is_readable($datafile)) {
 		<h1>Linked Gateways</h1>
 		<?php 
 		foreach($arr_data['Linked Gateways'] as $key=>$value){
-
-			switch($key) {
-				case 'A':
-					$modesc = DESC_MODUL_A;
-					break;
-				case 'B':
-					$modesc = DESC_MODUL_B;
-					break;
-				case 'C':
-					$modesc = DESC_MODUL_C;
-					break;
-				case 'D':
-					$modesc = DESC_MODUL_D;
-					break;
-				case 'E':
-					$modesc = DESC_MODUL_E;
-					break;
-			
-			}
-
 		echo '<div class="col-sm-3">';
 			echo '<div class="list-group">';
 			
-			if (count($value)==1){	
-		         echo '<a title="Topic: '.$modesc.'" href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">'.count($value).' Station</span></a>';
-			 } elseif (count($value)>1) {
-      			   echo '<a title="Topic: '.$modesc.'" href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">'.count($value).' Stations</span></a>';
-			   } else {
-			      echo '<a title="Topic: '.$modesc.'" href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">No Station</span></a>'; }
+				if (count($value)==1){	
+				echo '<a href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">'.count($value).' Station</span></a>';
+				}
+				elseif (count($value)>1){
+				echo '<a href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">'.count($value).' Stations</span></a>';
+				}
+				else {
+				echo '<a href="#" class="list-group-item active"><strong>Module&nbsp;'.$key.'</strong><span class="badge">No Station</span></a>';
+				echo '<a href="#" class="list-group-item">Not in use</a>';
+				}
 
-			      echo '<a title="Topic: '.$modesc.'" href="#" class="list-group-item list-group-item-info"><strong>'.$modesc.'</strong></a>';
 
-		 	if (count($value)>=1){
-		        	foreach($value as $call){
-				echo '<a href="'. CALLSIGNDB .'/'.substr($call['Callsign'],0,-1).'" class="list-group-item" target="_blank" title="Show Details for callsign">'.$call['Callsign'].'</a>';
-				} 
-			
-			} else { echo '<a href="#" class="list-group-item">Not in use</a>'; }
+				foreach($value as $call){
+				echo '<a href="'. CALLSIGNDB .'/'.$call['Callsign'].'" class="list-group-item" target="_blank" title="Show Details">'.$call['Callsign'].'</a>';
+				}
 			
 			echo '</div>';
-		
 		echo '</div>';
 		echo '<!-- Add the extra clearfix for only the required viewport -->';
 		echo '<div class="clearfix visible-xs-block"></div>';
@@ -322,7 +240,7 @@ if (file_exists($datafile) && is_readable($datafile)) {
 
       <hr>
       <footer>
-        <p><?php echo FOOTERTEXT; ?></p>
+        <p><a href="impressum.html">Impressum</a><?php echo FOOTERTEXT; ?></p>
       </footer>
     </div> <!-- /container -->
 
