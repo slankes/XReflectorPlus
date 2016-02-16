@@ -23,6 +23,34 @@ BUGS
 	You can find a bug-reporting Tool at github.com
 
 
+CONTROLLING
+===========
+You can control your XRF Reflector in an easy way by
+sending some command via network
+
+
+prompt> nc -u localhost 30002
+prompt>     lrf BXRF262C => ??
+ OK
+
+
+Dieser Befehl bedeutet, dass Du mit lrf = link reflector ausführst und
+der Synthax ist
+
+EigenesModulEntfernterReflectorEntferntesModul
+
+
+
+prompt> pu => ??
+prompt> R2AJV   ,192.168.25.204,REPEATER,102715,10:55:31,notMuted => ??
+prompt> XRF400  ,5.196.8.77,REPEATER,102715,10:54:18,notMuted => ??
+prompt> OK
+
+"PrintUser" die eingeloggt sind.
+
+
+
+
 COPYING/LICENSE
 ===============
 	GNU GPL v3 License
@@ -30,6 +58,7 @@ COPYING/LICENSE
 
 THANKS TO
 =========
+OE5STM,st0ne,
 
 
 
