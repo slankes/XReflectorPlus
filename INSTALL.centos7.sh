@@ -168,6 +168,15 @@ if [ $? -gt 0 ]; then
 	firewall-cmd --permanent --zone=public --add-service=http 
 	firewall-cmd --permanent --zone=public --add-service=https
 	firewall-cmd --reload
+	
+	echo "Configuring httpd....."
+     ln -s /opt/dxrfd/config/apache.conf /etc/httpd/conf.d/dxrfd.conf
+     systemctl restart httpd.service
+     
+     echo "DO NOT FORGET TO EDIT YOUR DASHBOARD"
+     echo "  vim /opt/dxrfd/public_html/configuration.php"
+     
+
 fi
 
 
