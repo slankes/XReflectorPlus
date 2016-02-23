@@ -1,12 +1,10 @@
 <?php 
 
 /*
-*
-* A simple Dashboard based on Twitter Boostrap for D-Start XRF Reflector Deamon
+* A simple Dashboard based on Twitter Boostrap for D-Start DXRFD Reflector Daemon
 * Version 0.4 by DL5RFK 
-* CC-Licence 
+* GNU GPL v3 License, https://github.com/dl5rfk
 */
-
 
 session_start();
 header('Cache-control: private'); // IE 6 FIX
@@ -16,7 +14,7 @@ include_once('/opt/dxrfd/public_html/configuration.php');
 $datafile = '/opt/dxrfd/public_html/data.json';
 
 
-//http://www.bitrepository.com/php-how-to-add-multi-language-support-to-a-website.html
+//based on http://www.bitrepository.com/php-how-to-add-multi-language-support-to-a-website.html
 if(isset($_GET['lang'])) {
 		$lang = $_GET['lang'];
  
@@ -48,12 +46,12 @@ switch ($lang) {
   $lang_file = 'lang.en.php';
  
 }
- 
+
 include_once 'languages/'.$lang_file;
 
 
 
-//
+//READ THE JSON FILE
 if (file_exists($datafile) && is_readable($datafile)) {
         fopen($datafile, r);
         $values = file_get_contents($datafile, r);
@@ -104,23 +102,22 @@ if (file_exists($datafile) && is_readable($datafile)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="author" content="Klaus DL5RFK">
+    
+    <meta name="author" content="<?php echo METATAG_AUTHOR; ?>">
     <meta name="content-language" content="en">
     <meta name="publisher" content="">
     <meta name="copyright" content="">
     <meta name="description" content="XRF850 Dashboard">
-    <meta name="keywords" content="XRF850, Dashboard, D-Star, Reflector">
-    <meta name="page-topic" content="XRF850, Dashboard, D-Star">
-    <meta name="page-type" content="XRF850, Dashboard, D-Star">
+    <meta name="keywords" content="<?php echo METATAG_KEYWORDS_EN; ?>">
     <meta name="audience" content="all">
     <meta name="robots" content="index,follow">
     <meta name="classification" content="private">
     <meta name="allow-search" content="yes">
-    <meta name="searchtitle" content="XRF850 Dashboard">
+    <meta name="searchtitle" content="<?php echo METATAG_SEARCHTITLE; ?>">
     <meta name="revisit-after" content="5 days">
     <meta name="abstract" content="XRF850 Dashboard">
     <meta http-equiv="cache-control" content="no-cache">
-    <meta name="date" content="2015-11-07">
+    <meta name="date" content="<?php echo date('Y-m-d');  ?>">
 
 
 	<meta http-equiv="refresh" content="59"/>

@@ -1,5 +1,8 @@
 <?php 
-/* THIS IS THE CONFIG FILE FOR THE NEXT GENERATION DASHBOARD 2.0 */
+/* THIS IS THE CONFIG FILE FOR THE NEXT GENERATION DASHBOARD 2.0 
+ * You can define everything here in this simple php text file
+ * 
+ */
 
 
 /* BOOTWATCH CSS STYLING SHEET URL, SELECT ONLY ONE URL */
@@ -8,14 +11,11 @@
 #define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cyborg/bootstrap.min.css');
 #define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css');
 #define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css');
-# war ori define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css');
+#define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css');
 define('CSS_BOOTSTRAP_URL','//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css');
 
+
 /* GENERAL SETTINGS */
-define('FOOTERTEXT','&nbsp;&copy; 2016 <a href="http://xrfmaster.net/wiki/" target=_blank>XRFMaster Team</a>, visit our website for further information.');
-define('CALLSIGNDB','http://qrz.com/db');
-
-
 
 define('PAGETITLE','XRF...'); 
 define('SUBTITLE',' ...... Reflector'); 
@@ -26,22 +26,24 @@ define('INFOURL','#');
 define('FOOTERTEXT','&nbsp;&copy; 2016 <a href="http://xrfmaster.net/wiki/" target=_blank>XRFMaster Team</a>, visit our website for further information.');
 define('CALLSIGNDB','http://qrz.com/db');
 
-/* HEADER PICTURE URL */
+/* HEADER PICTURE URL, THIS IS OPTIONAL */
 #define('HEADER_PIC_URL','http://www.t08.net/images/schloss_neuburg.jpg');
 
 /* SOME INFOS ABOUT THE TOPIC OF EACH MODULE */
-define('DESC_MODUL_A',' XRF-Verbund D-A-CH ');
-define('DESC_MODUL_B',' Brandmeister TG4850 ');
-define('DESC_MODUL_C',' Echolink 85851 + Bayernwolke FM ');
-define('DESC_MODUL_D',' D-Star Region Bayern-Süd ');
+define('DESC_MODUL_A',' Global Link D-A-CH ');
+define('DESC_MODUL_B',' Brandmeister TG.... ');
+define('DESC_MODUL_C',' Echolink Gateway');
+define('DESC_MODUL_D',' Local Com');
 define('DESC_MODUL_E',' Parrot');
 
-/* DEFINE META TAGS HERE */
+/* META TAGS HERE */
 define('METATAG_AUTHOR','DL5RFK Klaus');
+define('METATAG_KEYWORDS_EN','Ham Radio, D-Star, XRF, Reflector, ');
+define('METATAG_SEARCHTITLE','D-Star Reflector Dasboard XRF...');
 
 /* TOP BUTTONS DEFINITION */ 
-define('TOPBUTTON1TEXT','..');
-define('TOPBUTTON1LINK','../');
+define('TOPBUTTON1TEXT','');
+define('TOPBUTTON1LINK','#');
 
 define('TOPBUTTON2TEXT','Wiki');
 define('TOPBUTTON2LINK','http://xrfmaster.net/wiki/');
@@ -49,8 +51,8 @@ define('TOPBUTTON2LINK','http://xrfmaster.net/wiki/');
 define('TOPBUTTON3TEXT','XRFMaster');
 define('TOPBUTTON3LINK','http://www.xrfmaster.net/');
 
-#define('TOPBUTTON4TEXT','Hostfiles');
-#define('TOPBUTTON4LINK','http://vk4tux.duckdns.org/OD/');
+#define('TOPBUTTON4TEXT','');
+#define('TOPBUTTON4LINK','');
 
 #define('TOPBUTTON5TEXT','');
 #define('TOPBUTTON5LINK','#');
