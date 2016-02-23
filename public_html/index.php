@@ -234,7 +234,11 @@ if (file_exists($datafile) && is_readable($datafile)) {
 
 		 	if (count($value)>=1){
 		        	foreach($value as $call){
+                  if(preg_match("/^REF\d{3}/",$call['Callsign'])) {
+                     echo '<a href="http://'.strtolower(substr($call['Callsign'],0,6)).'.dstargateway.org/" class="list-group-item" target="_blank" title="Show Details for Reflector">'.$call['Callsign'].'</a>';
+                  } else {
 				echo '<a href="'. CALLSIGNDB .'/'.substr($call['Callsign'],0,-1).'" class="list-group-item" target="_blank" title="Show Details for callsign">'.$call['Callsign'].'</a>';
+                  }
 				} 
 			
 			} else { echo '<a href="#" class="list-group-item">Not in use</a>'; }
