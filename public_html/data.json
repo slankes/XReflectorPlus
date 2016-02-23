@@ -1,0 +1,50 @@
+{
+  "Reflector": "XRF850",
+  "Linked Gateways": { 
+    "A": [
+      {"Callsign": "XRF456 C"}
+    ],
+    "B": [
+      {"Callsign": "UP4DAR B"}
+    ],
+    "C": [
+    ],
+    "D": [
+      {"Callsign": "DB0POB B"},
+      {"Callsign": "DG1MIA D"},
+      {"Callsign": "DL5RFK D"},
+      {"Callsign": "DM0MHD B"}
+    ],
+    "E": [
+    ]
+  },
+  "Software Clients": {
+    "sitem": [
+      {"Callsign": "DL5RFK  ", "Module": "Listening", "Type": "HotSpot"},
+      {"Callsign": "DB0POB  ", "Module": "C", "Type": "HotSpot"}
+    ]
+  },  "Last Heard": {
+    "litem": [
+      {"Callsign": "DB0POB  ", "Last TX on": "XRF850 C", "Source": "DB0POB  ", "DateTime": "2016-02-23 15:56:00"},
+      {"Callsign": "OE5STM  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 15:49:26"},
+      {"Callsign": "DL5MCW  ", "Last TX on": "XRF850 D", "Source": "DB0POB B", "DateTime": "2016-02-23 15:08:15"},
+      {"Callsign": "DG9YBN  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 14:54:35"},
+      {"Callsign": "DG6EAX  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 14:54:29"},
+      {"Callsign": "DF2ET   ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 13:51:50"},
+      {"Callsign": "OE1PHS  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 13:21:12"},
+      {"Callsign": "DB1EPO  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 13:01:24"},
+      {"Callsign": "DL5BQ   ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 11:03:24"},
+      {"Callsign": "OE9VVV  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 10:26:58"},
+      {"Callsign": "DC7OU   ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 10:03:50"},
+      {"Callsign": "OE2WIO  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 09:35:07"},
+      {"Callsign": "OE3CDW  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 08:59:25"},
+      {"Callsign": "DK6HQ   ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 08:29:02"},
+      {"Callsign": "DO0SRE B", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 08:18:42"},
+      {"Callsign": "DG1MIA  ", "Last TX on": "XRF850 D", "Source": "DG1MIA D", "DateTime": "2016-02-23 08:15:11"},
+      {"Callsign": "DO1YKH  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 08:12:47"},
+      {"Callsign": "OE7CKI  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 07:42:01"},
+      {"Callsign": "DL7AHD  ", "Last TX on": "XRF850 A", "Source": "XRF456 C", "DateTime": "2016-02-23 07:34:37"},
+      {"Callsign": "DL5RFK  ", "Last TX on": "XRF850 D", "Source": "DL5RFK D", "DateTime": "2016-02-23 00:24:26"}
+    ]
+  }
+}

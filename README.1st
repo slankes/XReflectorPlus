@@ -6,11 +6,24 @@
 	
 	- http://www.dstar.at
 	- http://www.xrfel.net 
-	- 
+	- http://www.xrfmaster.net
 
 INSTALL
 =======
 	Use one of the Install-Script in this directory for your OS
+	or have a look inside the script.
+
+
+COMPILE
+=======
+
+The json file creater: 
+ g++ -W -Wall -fPIE -fstack-protector-all -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -g -O -o dxrfd_jsondata dxrfd_jsondata.cpp -lrt
+
+The dxrfd reflector:
+
+
+
 
 
 CHANGELOG
@@ -21,6 +34,9 @@ CHANGELOG
 BUGS
 ====
 	You can find a bug-reporting Tool at github.com
+	github.com/oe5stm
+	github.com/st0ne
+	github.com/dl5rfk
 
 
 CONTROLLING
@@ -28,26 +44,12 @@ CONTROLLING
 You can control your XRF Reflector in an easy way by
 sending some command via network
 
+  prompt> nc -u localhost 30002
+  prompt> #linking to an remote reflector 
+  prompt> lrf BXRF262C 
+  prompt> OK
 
-prompt> nc -u localhost 30002
-prompt>     lrf BXRF262C => ??
- OK
-
-
-Dieser Befehl bedeutet, dass Du mit lrf = link reflector ausführst und
-der Synthax ist
-
-EigenesModulEntfernterReflectorEntferntesModul
-
-
-
-prompt> pu => ??
-prompt> R2AJV   ,192.168.25.204,REPEATER,102715,10:55:31,notMuted => ??
-prompt> XRF400  ,5.196.8.77,REPEATER,102715,10:54:18,notMuted => ??
-prompt> OK
-
-"PrintUser" die eingeloggt sind.
-
+But you bettter use the tiny helper dxrfd_start_cli.sh. 
 
 
 
@@ -60,6 +62,3 @@ THANKS TO
 =========
 OE5STM,st0ne,
 
-
-
-EOF;
