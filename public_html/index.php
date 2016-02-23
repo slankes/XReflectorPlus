@@ -279,7 +279,7 @@ if (file_exists($datafile) && is_readable($datafile)) {
 			<th>Local Date&Time</th><th>Callsign</th><th>Last TX on</th><th>Source</th>
 			<?php 
 			foreach ($arr_data['Last Heard']['litem'] as $row){
-			echo "<tr><td>".$row['DateTime']."</td><td><a href=\"http://www.qrz.com/db/".$row['Callsign']."\">".$row['Callsign']."</td><td>".$row['Last TX on']."</td><td>".$row['Source']."</td></tr>";
+			echo "<tr><td>".$row['DateTime']."</td><td><a href=\"". CALLSIGNDB ."/".$row['Callsign']."\">".$row['Callsign']."</td><td>".$row['Last TX on']."</td><td>".$row['Source']."</td></tr>";
 			}
 			?>
 		</table>
@@ -297,7 +297,7 @@ if (file_exists($datafile) && is_readable($datafile)) {
 				<?php
 			
 					#echo 'The Server is owned by '. SYSOPCALL .', '. SYSOPNAME .'.';
-					echo 'The Server is owned by <a href="http://www.qrz.com/db/'.SYSOPCALL.'">'.SYSOPCALL.'</a>, '. SYSOPNAME .'.';
+					echo 'The Server is owned by <a href="'. CALLSIGNDB .'/'.SYSOPCALL.'">'.SYSOPCALL.'</a>, '. SYSOPNAME .'.';
 					$uptime = shell_exec("cut -d. -f1 /proc/uptime");
 					$days = floor($uptime/60/60/24);
 					$hours = $uptime/60/60%24;
