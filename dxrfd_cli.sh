@@ -5,7 +5,7 @@
 #description : This script will help you to controll your DXRFD Reflector
 #author	     : DL5RFK
 #date        : 2016-02-06
-#usage	     : bash ./dxrfd_start.cli.sh 
+#usage	     : bash ./dxrfd_cli.sh 
 #notes       : 
 #licenze     : GNU GPL v3
 # ----------------------------------------------------------------------
