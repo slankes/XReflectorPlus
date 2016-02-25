@@ -2,3 +2,6 @@
 
 g++ -W -Wall -g -o xrf_lh xrf_lh.cpp -lrt
 
+
+echo "! Do not forget to active the cronjob in conjobs.conf !"
+
