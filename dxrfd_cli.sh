@@ -2,7 +2,7 @@
 
 # ----------------------------------------------------------------------
 #title       : 
-#description : This script will help you to controll your DXRFD Reflector
+#description : This script will help you to control your DXRFD Reflector
 #author	     : DL5RFK
 #date        : 2016-02-06
 #usage	     : bash ./dxrfd_cli.sh 
